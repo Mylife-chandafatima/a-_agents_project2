@@ -1,14 +1,19 @@
 # main.py
 import chainlit as cl
 import asyncio
-from game_agents import NarratorAgent, MonsterAgent, ItemAgent, Agent, Runner, OpenAIChatCompletionsModel
+from experts.game_base_agent import base_agent
+from experts.game_narrator_agent import narrator_agent
+from experts.enemy_monster_agent import monster_agent
+from experts.game_item_agent import item_agent
+
+from agents import  Agent, Runner, OpenAIChatCompletionsModel
 import tools
 import config
 
 # Initialize agents
-narrator_agent = NarratorAgent()
-monster_agent = MonsterAgent()
-item_agent = ItemAgent()
+narrator_agent = narrator_agent
+monster_agent = monster_agent
+item_agent = item_agent
 
 # Game state
 player_hp = config.PLAYER_STARTING_HP

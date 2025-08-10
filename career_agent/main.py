@@ -1,10 +1,10 @@
 import chainlit as cl
 from agents import Runner, OpenAIChatCompletionsModel
 from agents.run import RunConfig
-from agents.career_guidance_agent import career_agent
-from agents.skill_development_agent import skill_agent
-from agents.job_search_agent import job_agent
-from config import model, external_client, openai_config
+from experts.career_guidance_agent import career_agent
+from experts.skill_development_agent import skill_agent
+from experts.job_search_agent import job_agent
+from config import model, external_client, config
 
 @cl.on_chat_start
 async def start():
@@ -23,7 +23,7 @@ async def handle(msg: cl.Message):
         result = await Runner.run(
             career_agent,
             history,
-            run_config=openai_config
+            run_config=config
         )
         output = result.final_output
 

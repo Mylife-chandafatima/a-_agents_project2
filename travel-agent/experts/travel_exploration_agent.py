@@ -1,6 +1,6 @@
 from agents import Agent, Runner, OpenAIChatCompletionsModel
 from config import model
-from travel_agents.travel_booking_agent import booking_agent
+from experts.travel_booking_agent import booking_agent
 
 explore_agent = Agent(
     name="ExploreAgent",

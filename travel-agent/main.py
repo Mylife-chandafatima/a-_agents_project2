@@ -1,8 +1,8 @@
 import chainlit as cl
 from agents import Runner
-from travel_agents.destination_planning_agent import destination_agent
-from travel_agents.travel_exploration_agent import explore_agent
-from travel_agents.travel_booking_agent import booking_agent
+from experts.destination_planning_agent import destination_agent
+from experts.travel_exploration_agent import explore_agent
+from experts.travel_booking_agent import booking_agent
 
 # Event handler for chat start
 @cl.on_chat_start

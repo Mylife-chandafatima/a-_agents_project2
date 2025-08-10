@@ -1,7 +1,7 @@
 from agents import Agent, Runner, OpenAIChatCompletionsModel
 from config import model
-from travel_agents.travel_booking_agent import booking_agent
-from travel_agents.travel_exploration_agent import explore_agent
+from experts.travel_booking_agent import booking_agent
+from experts.travel_exploration_agent import explore_agent
 from travel_tools.hotel_recommendation_tool import suggest_hotels
 from travel_tools.flight_search_tool import get_flights
 

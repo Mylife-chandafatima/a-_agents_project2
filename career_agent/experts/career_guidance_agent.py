@@ -1,7 +1,7 @@
 from agents import Agent, Runner, OpenAIChatCompletionsModel, handoff
 from config import model
-from agents.skill_development_agent import  skill_agent
-from agents.job_search_agent import  job_agent
+from experts.skill_development_agent import  skill_agent
+from experts.job_search_agent import  job_agent
 from utils.orchestrator import orchestrator_handoff
 
 
